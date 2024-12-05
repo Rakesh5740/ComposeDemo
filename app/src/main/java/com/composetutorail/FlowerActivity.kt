@@ -14,7 +14,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Card
@@ -38,12 +40,13 @@ import com.composetutorail.ui.theme.ComposeDemoTheme
 
 class FlowerActivity : ComponentActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeDemoTheme {
                 Surface(
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier.verticalScroll(rememberScrollState())
                 ) {
                     PopularFlowersList()
                 }
@@ -89,6 +92,38 @@ class FlowerActivity : ComponentActivity() {
             Surface(modifier = Modifier.padding(10.dp)) {
                 Text(
                     text = "Flowers",
+                    style = TextStyle(
+                        color = Color.Black,
+                        fontSize = 24.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+            }
+            LazyRow {
+                items(items = DataSource().getFlowerDetails(),
+                    itemContent = { flowers ->
+                        FlowerCard(flowers)
+                    })
+            }
+            Surface(modifier = Modifier.padding(10.dp)) {
+                Text(
+                    text = "Demo App",
+                    style = TextStyle(
+                        color = Color.Black,
+                        fontSize = 24.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+            }
+            LazyRow {
+                items(items = DataSource().getFlowerDetails(),
+                    itemContent = { flowers ->
+                        FlowerCard(flowers)
+                    })
+            }
+            Surface(modifier = Modifier.padding(10.dp)) {
+                Text(
+                    text = "Demo",
                     style = TextStyle(
                         color = Color.Black,
                         fontSize = 24.sp,
