@@ -10,10 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c62d476e-31fe-4804-b2c2-1faa203b78be" name="Changes" comment="added vertical scrolling">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/AppBar.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/Routes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/Util.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/screens/Home.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/screens/MainScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/screens/Profile.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/screens/Settings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/FlowerActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/FlowerActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/AppBar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/AppBar.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/FlowerActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/MainViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/data/DataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/data/DataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/model/Flower.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/model/Flower.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +39,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\hp\.android\avd\Pixel_8_API_34.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Rakesh Kushwaha\.android\avd\Pixel_2_API_30.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -70,7 +86,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Enum" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -108,17 +126,35 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;DEBUGGABLE_DEVICE&quot;: &quot;Pixel_2_API_30 [emulator-5554]&quot;,
+    &quot;DEBUGGABLE_PROCESS&quot;: &quot;com.composetutorial&quot;,
+    &quot;DEBUGGER_ID&quot;: &quot;Auto&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHOW_ALL_PROCESSES&quot;: &quot;false&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Personal/basic-android-kotlin-compose-training-cupcake-navigation&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.google.gct.login2.settings.GoogleLoginApplicationSettingsConfigurableProvider&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;C:\\Users\\Rakesh Kushwaha\\.gradle&quot;
+    ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Personal\ComposeDemo\app\src\main\java\com\composetutorail\screens" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="com.composetutorail" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="ComposeDemo.app.main" />
@@ -133,8 +169,6 @@
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
-      <option name="RESTORE_ENABLED" value="false" />
-      <option name="RESTORE_FILE" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
@@ -282,5 +316,19 @@
     <MESSAGE value="hhh" />
     <MESSAGE value="added vertical scrolling" />
     <option name="LAST_COMMIT_MESSAGE" value="added vertical scrolling" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/composetutorail/screens/Home.kt</url>
+          <line>40</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

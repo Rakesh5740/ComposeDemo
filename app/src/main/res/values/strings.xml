@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ComposeDemo</string>
+    <string name="second">Second</string>
+    <string name="third">Third</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="back_button">Back</string>
+
 </resources>
