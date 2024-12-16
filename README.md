@@ -8,5 +8,3 @@ Technologies / Tools used for building this app includes:
 #Hilt
 #Coil
 
-
-![Uploading Screenshot_20241216_220728.png…]()
