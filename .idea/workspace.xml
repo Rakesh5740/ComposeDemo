@@ -10,49 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c62d476e-31fe-4804-b2c2-1faa203b78be" name="Changes" comment="added navigation">
-      <change afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/ApiService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/App.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/MainViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/data/ProductList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/data/ProductResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/network/ApiClient.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/network/ApiState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/network/AppModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/network/NetworkExceptions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/network/NetworkModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/network/SuspendedNetworkGetRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/repository/ProductsRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/repository/ProductsRepositoryImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/repository/mapper/ProductsListMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/Constant.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/composetutorail/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/composedemo/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/AppBar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/AppBar.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/MainViewModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/Routes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/Routes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/Util.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/Util.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/data/DataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/data/DataSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/model/CardData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/model/CardData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/model/Flower.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/model/Flower.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/screens/Home.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/Home.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/screens/MainScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/MainScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/screens/Profile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/Profile.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/screens/Settings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/Settings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/ui/theme/Color.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/ui/theme/Color.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/ui/theme/Theme.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composetutorail/ui/theme/Type.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/ui/theme/Type.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/composetutorail/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/composedemo/ExampleUnitTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/network/ApiService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/AppBar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/AppBar.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/MainViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/Routes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/Routes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/data/DataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/data/ProductList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/data/ProductList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/data/ProductResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/data/ProductResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/model/Flower.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/network/ApiClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/network/ApiClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/network/NetworkModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/network/NetworkModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/repository/ProductsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/repository/ProductsRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/repository/ProductsRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/repository/ProductsRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/repository/mapper/ProductsListMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/repository/mapper/ProductsListMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/Home.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/Home.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/MainScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/MainScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/Settings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/Settings.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +42,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Rakesh Kushwaha\.android\avd\Pixel_2_API_30.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Rakesh Kushwaha\.android\avd\Pixel_2_API_34.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -113,16 +93,16 @@
         <option value="Kotlin Annotation" />
         <option value="Kotlin Interface" />
         <option value="Kotlin File" />
-        <option value="Kotlin Object" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main_api_integration" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -154,7 +134,7 @@
   "keyToString": {
     "Android App.Personal.ComposeDemo.app.executor": "Run",
     "Android App.app.executor": "Run",
-    "DEBUGGABLE_DEVICE": "Pixel_2_API_30 [emulator-5554]",
+    "DEBUGGABLE_DEVICE": "Pixel_2_API_34 [emulator-5554]",
     "DEBUGGABLE_PROCESS": "com.composedemo",
     "DEBUGGER_ID": "Auto",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -181,9 +161,11 @@
       <recent name="C:\Personal\ComposeDemo\app\src\main\java\com\composetutorail\screens" />
     </key>
     <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="com.composedemo.network" />
       <recent name="com.composetutorail" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.composedemo.network" />
       <recent name="com.composetutorail.network" />
     </key>
   </component>

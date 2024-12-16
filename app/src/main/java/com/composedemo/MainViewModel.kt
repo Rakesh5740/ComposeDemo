@@ -26,9 +26,7 @@ class MainViewModel @Inject constructor(
 
     internal fun fetchProducts() {
         viewModelScope.launch {
-            productsRepository.getProductsList().collect {
-                _productsList.postValue(it)
-            }
+            _productsList.value = productsRepository.getProductsList()
         }
     }
 }

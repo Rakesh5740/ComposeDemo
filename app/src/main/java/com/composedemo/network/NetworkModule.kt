@@ -1,6 +1,5 @@
 package com.composedemo.network
 
-import com.composedemo.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -48,6 +47,6 @@ class NetworkModule {
     }
 
     companion object {
-        private const val API_BASE_URL_DEV = "https://jsonplaceholder.typicode.com/"
+        private const val API_BASE_URL_DEV = "https://jsonexamples.com/"
     }
 }

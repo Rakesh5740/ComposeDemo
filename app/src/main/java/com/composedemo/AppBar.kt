@@ -20,7 +20,7 @@ import androidx.compose.ui.res.stringResource
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ComposeAppBar(
-    currentScreen: ComposeScreen,
+    currentScreen: AppDestination,
     canNavigateBack: Boolean,
     navigateUp: () -> Unit,
     modifier: Modifier = Modifier

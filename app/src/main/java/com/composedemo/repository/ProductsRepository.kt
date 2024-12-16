@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface ProductsRepository {
 
-    fun getProductsList(): Flow<ApiState<ProductList>>
+    suspend fun getProductsList(): ApiState<ProductList>
 
 }

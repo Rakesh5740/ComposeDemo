@@ -1,11 +1,12 @@
 package com.composedemo.screens
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,67 +20,43 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.composedemo.ComposeScreen
-import com.composedemo.data.DataSource
+import com.composedemo.AppDestination
+import com.composedemo.R
 import com.composedemo.model.CardData
 import com.composedemo.ui.theme.ComposeDemoTheme
 
-
 @Composable
-fun DataList(onClicked: (String) -> Unit) {
-    MyCard(
-        cardItems = DataSource.cardData,
-        modifier = Modifier.padding(10.dp, 10.dp, 10.dp, 10.dp),
-        onClicked
-    )
-}
-
-@Composable
-fun MyCard(
-    cardItems: List<CardData>,
+fun ImageDetails(
+    cardData: CardData,
     modifier: Modifier = Modifier,
     onClicked: (String) -> Unit
 ) {
-    MyCardRow(cardItems, modifier = modifier, onClicked)
-}
-
-@Composable
-fun MyCardRow(
-    cardItems: List<CardData>,
-    modifier: Modifier = Modifier,
-    onClicked: (String) -> Unit
-) {
-    LazyRow(modifier = modifier) {
-        items(cardItems) { data ->
-            SetData(
-                data,
-                modifier = Modifier.padding(8.dp),
-                onClicked
-            )
-        }
-    }
-}
-
-@Composable
-fun SetData(cardData: CardData, modifier: Modifier = Modifier, onClicked: (String) -> Unit) {
-    Card(modifier = modifier,
-        onClick = {
-            onClicked(ComposeScreen.Profile.name)
-        }) {
-        Column {
-            Image(
-                modifier = Modifier.size(100.dp, 100.dp),
-                alignment = Alignment.Center,
-                painter = painterResource(cardData.imageResourceId),
-                contentDescription = null
-            )
-            Text(
-                cardData.name,
-                letterSpacing = TextUnit(.5f, TextUnitType.Sp),
-                style = TextStyle(
-                    color = Color.Black, fontSize = 16.sp
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .background(Color.White)) {
+        Card(modifier = modifier
+            .padding(15.dp),
+            onClick = {
+                onClicked(AppDestination.Profile.name)
+            }) {
+            Column {
+                Image(
+                    modifier = Modifier.size(180.dp, 180.dp),
+                    painter = painterResource(cardData.imageResourceId),
+                    contentDescription = null
                 )
-            )
+                Text(
+                    cardData.name,
+                    letterSpacing = TextUnit(.5f, TextUnitType.Sp),
+                    style = TextStyle(
+                        color = Color.Black,
+                        fontSize = 16.sp
+                    ),
+                    modifier = Modifier
+                        .align(Alignment.CenterHorizontally)
+                        .padding(5.dp)
+                )
+            }
         }
     }
 }
@@ -88,6 +65,7 @@ fun SetData(cardData: CardData, modifier: Modifier = Modifier, onClicked: (Strin
 @Composable
 fun GreetingPreview() {
     ComposeDemoTheme {
-        DataList(onClicked = {})
+        ImageDetails(CardData("fd", R.drawable.img_1),
+            onClicked = {})
     }
 }

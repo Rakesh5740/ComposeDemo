@@ -1,9 +1,12 @@
 package com.composedemo.data
 
 
-data class ProductList (
-    val userId: Int,
-    val id: Int,
-    val title: String,
-    val body: String
-)
+interface ProductList {
+    val productList: List<ProductData?>
+}
+
+interface ProductData {
+    val id: Int
+    val title: String
+    val images: String
+}

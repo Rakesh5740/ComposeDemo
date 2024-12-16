@@ -1,12 +1,10 @@
 package com.composedemo.screens
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -29,21 +27,22 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.composedemo.ComposeScreen
-import com.composedemo.data.DataSource
-import com.composedemo.model.Flower
+import coil3.compose.AsyncImage
+import com.composedemo.AppDestination
+import com.composedemo.R
+import com.composedemo.data.ProductData
 import com.composedemo.ui.theme.ComposeDemoTheme
 
 
 @Composable
 fun HomeScreen(
-//    productList: ProductList,
+    productList: List<ProductData?>,
     onClicked: (String) -> Unit
 ) {
     Column {
         Surface(modifier = Modifier.padding(10.dp, 10.dp, 10.dp, 10.dp)) {
             Text(
-                text = "Popular Flowers",
+                text = "Popular",
                 style = TextStyle(
                     color = Color.Black,
                     fontSize = 24.sp,
@@ -52,9 +51,9 @@ fun HomeScreen(
             )
         }
         LazyRow {
-            items(items = DataSource.flowerList,
-                itemContent = { flowers ->
-                    FlowerCard(flowers, onClicked)
+            items(items = productList,
+                itemContent = { item ->
+                    SetData(item, onClicked)
                 })
         }
         Surface(modifier = Modifier.padding(10.dp)) {
@@ -68,9 +67,9 @@ fun HomeScreen(
             )
         }
         LazyRow {
-            items(items = DataSource.flowerList,
+            items(items = productList,
                 itemContent = { flowers ->
-                    FlowerCard(flowers, onClicked)
+                    SetData(flowers, onClicked)
                 })
         }
         Surface(modifier = Modifier.padding(10.dp)) {
@@ -84,9 +83,9 @@ fun HomeScreen(
             )
         }
         LazyRow {
-            items(items = DataSource.flowerList,
+            items(items = productList,
                 itemContent = { flowers ->
-                    FlowerCard(flowers, onClicked)
+                    SetData(flowers, onClicked)
                 })
         }
         Surface(modifier = Modifier.padding(10.dp)) {
@@ -100,9 +99,9 @@ fun HomeScreen(
             )
         }
         LazyRow {
-            items(items = DataSource.flowerList,
+            items(items = productList,
                 itemContent = { flowers ->
-                    FlowerCard(flowers, onClicked)
+                    SetData(flowers, onClicked)
                 })
         }
         Surface(modifier = Modifier.padding(10.dp)) {
@@ -116,25 +115,30 @@ fun HomeScreen(
             )
         }
         LazyRow {
-            items(items = DataSource.flowerList,
+            items(items = productList,
                 itemContent = { flowers ->
-                    FlowerCard(flowers, onClicked = onClicked)
+                    SetData(flowers, onClicked = onClicked)
                 })
         }
     }
 }
 
 @Composable
-private fun FlowerCard(flower: Flower, onClicked: (String) -> Unit) {
+private fun SetData(
+    item: ProductData?,
+    onClicked: (String) -> Unit
+) {
     val context = LocalContext.current
+    val dummyImage = "https://picsum.photos/536/354"
     Card(
         shape = RoundedCornerShape(14.dp),
         modifier = Modifier
             .padding(10.dp)
             .width(180.dp),
         onClick = {
-//            showToast(context, "@@@@@@")
-            onClicked(ComposeScreen.Settings.name)
+            onClicked(
+                AppDestination.Settings.name
+            )
         }
     ) {
         Column(
@@ -143,22 +147,29 @@ private fun FlowerCard(flower: Flower, onClicked: (String) -> Unit) {
                 .padding(10.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Image(
-                painter = painterResource(id = flower.image),
+//            Image(
+//                painter = painterResource(id = item.images),
+//                contentDescription = null,
+//                modifier = Modifier.size(160.dp)
+//            )
+            AsyncImage(
+                model = dummyImage,
+                placeholder = painterResource(R.drawable.img_2),
+                error = painterResource(R.drawable.img_3),
                 contentDescription = null,
-                modifier = Modifier.size(160.dp)
             )
+
             Row(modifier = Modifier.padding(top = 20.dp)) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
-                        text = flower.name,
+                        text = item?.title ?: "",
                         style = TextStyle(
                             color = Color.DarkGray,
                             fontSize = 14.sp
                         )
                     )
                     Text(
-                        text = flower.price.toString(),
+                        text = item?.id.toString(),
                         style = TextStyle(
                             color = Color.Black,
                             fontSize = 16.sp
@@ -166,7 +177,7 @@ private fun FlowerCard(flower: Flower, onClicked: (String) -> Unit) {
                     )
                 }
                 IconButton(
-                    onClick = { },
+                    onClick = { dummyImage },
                     modifier = Modifier.background(
                         color = Color.Red,
                         shape = RoundedCornerShape(10.dp)
@@ -185,8 +196,8 @@ private fun FlowerCard(flower: Flower, onClicked: (String) -> Unit) {
 
 @Preview(showBackground = true)
 @Composable
-fun FlowersPreview() {
+fun Preview() {
     ComposeDemoTheme {
-//        HomeScreen(onClicked = {})
+//        HomeScreen(emptyList(), onClicked = {})
     }
 }

@@ -3,6 +3,9 @@ package com.composedemo
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Surface
+import androidx.compose.ui.Modifier
 import com.composedemo.screens.MainScreen
 import com.composedemo.ui.theme.ComposeDemoTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -14,7 +17,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeDemoTheme {
-                MainScreen(ComposeScreen.Start.name)
+                Surface(modifier = Modifier.fillMaxSize()) {
+                    MainScreen(AppDestination.Start.name)
+                }
             }
         }
     }

@@ -78,20 +78,20 @@ dependencies {
 
     implementation(libs.androidx.navigation.compose)
 
-//    // Retrofit
+    // Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
-//
-//    // Timber
+
+    // Timber
     implementation(libs.timber)
 
     /* Kotlin Coroutines for Flow */
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
 
-//    // Coroutine Lifecycle Scopes
+    // Coroutine Lifecycle Scopes
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
@@ -109,12 +109,16 @@ dependencies {
 //    /* ViewModel */
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 
-//    /* Hilt and Navigation */
+    /* Hilt and Navigation */
     implementation(libs.androidx.hilt.navigation.compose)
 
     implementation(libs.squareup.moshi)
     implementation(libs.runtime.livedata)
     ksp(libs.moshi.kotlin.codegen)
+
+    /* Coil for image loading */
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
 
     /* Debug */
     testImplementation(libs.junit)
