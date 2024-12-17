@@ -9,15 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c62d476e-31fe-4804-b2c2-1faa203b78be" name="Changes" comment="screenshots">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="c62d476e-31fe-4804-b2c2-1faa203b78be" name="Changes" comment="shared data between screens">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/model/CardData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/model/CardData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/Home.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/Home.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/MainScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/MainScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/Settings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/composedemo/screens/Settings.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733580997697</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="shared data between screens">
+      <option name="closed" value="true" />
+      <created>1734426231960</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734426231960</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,6 +394,7 @@
     <MESSAGE value="hhh" />
     <MESSAGE value="added vertical scrolling" />
     <MESSAGE value="added navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added navigation" />
+    <MESSAGE value="shared data between screens" />
+    <option name="LAST_COMMIT_MESSAGE" value="shared data between screens" />
   </component>
 </project>
