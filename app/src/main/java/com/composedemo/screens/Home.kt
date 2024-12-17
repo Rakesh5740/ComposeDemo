@@ -20,7 +20,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -31,13 +30,14 @@ import coil3.compose.AsyncImage
 import com.composedemo.AppDestination
 import com.composedemo.R
 import com.composedemo.data.ProductData
+import com.composedemo.model.CardData
 import com.composedemo.ui.theme.ComposeDemoTheme
 
 
 @Composable
 fun HomeScreen(
     productList: List<ProductData?>,
-    onClicked: (String) -> Unit
+    onClicked: (String, CardData) -> Unit
 ) {
     Column {
         Surface(modifier = Modifier.padding(10.dp, 10.dp, 10.dp, 10.dp)) {
@@ -126,9 +126,8 @@ fun HomeScreen(
 @Composable
 private fun SetData(
     item: ProductData?,
-    onClicked: (String) -> Unit
+    onClicked: (String, CardData) -> Unit
 ) {
-    val context = LocalContext.current
     val dummyImage = "https://picsum.photos/536/354"
     Card(
         shape = RoundedCornerShape(14.dp),
@@ -136,9 +135,14 @@ private fun SetData(
             .padding(10.dp)
             .width(180.dp),
         onClick = {
-            onClicked(
-                AppDestination.Settings.name
-            )
+            item?.let {
+                CardData(it.id, item.title, dummyImage)
+            }?.let {
+                onClicked(
+                    AppDestination.Settings.name,
+                    it
+                )
+            }
         }
     ) {
         Column(
@@ -147,11 +151,6 @@ private fun SetData(
                 .padding(10.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-//            Image(
-//                painter = painterResource(id = item.images),
-//                contentDescription = null,
-//                modifier = Modifier.size(160.dp)
-//            )
             AsyncImage(
                 model = dummyImage,
                 placeholder = painterResource(R.drawable.img_2),

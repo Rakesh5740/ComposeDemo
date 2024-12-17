@@ -1,6 +1,5 @@
 package com.composedemo.screens
 
-import android.widget.Toast
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -11,6 +10,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -20,21 +20,17 @@ import androidx.navigation.compose.rememberNavController
 import com.composedemo.AppDestination
 import com.composedemo.ComposeAppBar
 import com.composedemo.MainViewModel
-import com.composedemo.R
-import com.composedemo.data.ProductList
 import com.composedemo.model.CardData
-import com.composedemo.network.ApiState
 
 
 @Composable
 fun MainScreen(
-    screenName: String,
-    viewModel: MainViewModel = viewModel(),
+    viewModel: MainViewModel = hiltViewModel(),
     navController: NavHostController = rememberNavController()
 ) {
     val productList by viewModel.productsList.observeAsState()
+    val selectedCard by viewModel.selectedCard.observeAsState()
     val context = LocalContext.current
-
 
     /* Get current back stack entry  */
     val backStackEntry by navController.currentBackStackEntryAsState()
@@ -53,43 +49,33 @@ fun MainScreen(
     ) { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = screenName,
+            startDestination = AppDestination.Start.name,
             modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
                 .padding(innerPadding)
         ) {
             composable(route = AppDestination.Start.name) {
-                // Display data
-
-                when (productList) {
-                    is ApiState.Loading -> {
-                        // Show loading indicator
-                    }
-
-                    is ApiState.Success -> {
-                        // Display data
-                        val data = (productList as ApiState.Success<ProductList>).data
-                        HomeScreen(data.productList, onClicked = {
-                            navController.navigate(AppDestination.Settings.name)
+                productList?.let { it1 ->
+                    HomeScreen(it1.productList,
+                        onClicked = { screen, cardData ->
+                            it1.productList[0]?.let { it2 ->
+                                viewModel.updateSelectedCard(
+                                    cardData = cardData
+                                )
+                            }
+                            navController.navigate(screen)
                         })
-                    }
-
-                    is ApiState.Error -> {
-                        Toast.makeText(
-                            context.applicationContext,
-                            "Something went wrong", Toast.LENGTH_SHORT
-                        ).show()
-                    }
-
-                    else -> {}
                 }
             }
 
             composable(route = AppDestination.Settings.name) {
-                ImageDetails(CardData("HH", R.drawable.img_1), onClicked = {
-                    navController.navigate(AppDestination.Profile.name)
-                })
+                selectedCard?.let { it1 ->
+                    ImageDetails(it1,
+                        onClicked = {
+                            navController.navigate(it)
+                        })
+                }
             }
 
             composable(route = AppDestination.Profile.name) {

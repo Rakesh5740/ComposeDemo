@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeDemoTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
-                    MainScreen(AppDestination.Start.name)
+                    MainScreen()
                 }
             }
         }
