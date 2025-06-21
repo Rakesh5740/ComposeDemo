@@ -1,6 +1,5 @@
 package com.composedemo
 
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,7 +8,6 @@ import com.composedemo.data.ProductList
 import com.composedemo.model.CardData
 import com.composedemo.network.ApiState
 import com.composedemo.repository.ProductsRepository
-import com.composedemo.screens.HomeScreen
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

@@ -11,7 +11,6 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -20,7 +19,6 @@ import androidx.navigation.compose.rememberNavController
 import com.composedemo.AppDestination
 import com.composedemo.ComposeAppBar
 import com.composedemo.MainViewModel
-import com.composedemo.model.CardData
 
 
 @Composable
